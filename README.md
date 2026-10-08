@@ -49,3 +49,21 @@ endorsed by any of them. You need your own copies of both games.
 ## Licence
 
 GPL-3.0-or-later (see `LICENSE.txt`), because the plugin links CommonLibSSE NG.
+
+## Code signing policy
+
+Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by
+[SignPath Foundation](https://signpath.org).
+
+- Committers and reviewers: [dadoudillen-create](https://github.com/dadoudillen-create)
+- Approvers: [dadoudillen-create](https://github.com/dadoudillen-create)
+
+Only `DragonlandsGP.asi`, built by this repository's GitHub Actions workflow from the tagged source, is signed.
+Third-party files shipped alongside it (Address Library for SKSE Plugins, Python and its libraries) keep their own
+authors' signatures or none.
+
+### Privacy policy
+
+This program will not transfer any information to other networked systems unless specifically requested by the user
+or the person installing or operating it. It reads the player's own game folders (Skyrim and F1 2021) on the same PC
+and writes a log to `%LOCALAPPDATA%\DragonlandsGP`.
