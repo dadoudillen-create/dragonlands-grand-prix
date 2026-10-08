@@ -29,7 +29,7 @@ cmake -S src/sseplugin -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOL
 cmake --build build --target DragonlandsGP
 ```
 
-The GitHub Actions workflow builds the same thing; release builds are code-signed through SignPath Foundation.
+The GitHub Actions workflow builds the same thing; release builds are code-signed (see below).
 
 ## Credits
 
@@ -50,17 +50,11 @@ endorsed by any of them. You need your own copies of both games.
 
 GPL-3.0-or-later (see `LICENSE.txt`), because the plugin links CommonLibSSE NG.
 
-## Code signing policy
+## Code signing
 
-Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by
-[SignPath Foundation](https://signpath.org).
-
-- Committers and reviewers: [dadoudillen-create](https://github.com/dadoudillen-create)
-- Approvers: [dadoudillen-create](https://github.com/dadoudillen-create)
-
-Only `DragonlandsGP.asi`, built by this repository's GitHub Actions workflow from the tagged source, is signed.
-Third-party files shipped alongside it (Address Library for SKSE Plugins, Python and its libraries) keep their own
-authors' signatures or none.
+Release builds of `DragonlandsGP.asi` are signed by the maintainer with a Certum code-signing certificate
+(`tools/scripts/sign.ps1`), so Windows Smart App Control can verify them. Third-party files shipped alongside it
+(Address Library for SKSE Plugins, Python and its libraries) keep their own authors' signatures or none.
 
 ### Privacy policy
 
