@@ -1,0 +1,414 @@
+{
+ "sheet": "checkpoints",
+ "doc": "Checkpoint loop: crossroads -> Riverwood bridge (turn) -> back. Outbound order 0..N-1, return passes N-2..0; lap ends at cp00.",
+ "track": {
+  "id": "whiterun_riverwood",
+  "name": "Whiterun Crossroads to Riverwood",
+  "one_way_m": 664.6,
+  "lap_m": 1329.2,
+  "direction": "out_and_back",
+  "laps_default": 1
+ },
+ "rows": [
+  {
+   "id": "cp00",
+   "order": 0,
+   "role": "start_finish",
+   "cell": "0000963A",
+   "grid": [
+    4,
+    -4
+   ],
+   "pos": [
+    18313.0,
+    -14085.0,
+    -4689.0
+   ],
+   "heading": 1.906,
+   "radius_units": 600,
+   "near_road_ref": "0003AB24",
+   "source": "RoadStraight02 (0003AB24) in WhiterunExterior16: level road for the grid (route start was on rocks)",
+   "verified": false
+  },
+  {
+   "id": "cp01",
+   "order": 1,
+   "role": "checkpoint",
+   "cell": "0000963A",
+   "grid": [
+    4,
+    -4
+   ],
+   "pos": [
+    20098.1,
+    -14706.9,
+    -4626.4
+   ],
+   "heading": 1.6796,
+   "radius_units": 600,
+   "near_road_ref": "0003AB22",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp02",
+   "order": 2,
+   "role": "checkpoint",
+   "cell": "00009639",
+   "grid": [
+    5,
+    -4
+   ],
+   "pos": [
+    22555.3,
+    -14975.2,
+    -4614.7
+   ],
+   "heading": 1.9064,
+   "radius_units": 600,
+   "near_road_ref": "0003AB2C",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp03",
+   "order": 3,
+   "role": "checkpoint",
+   "cell": "00009638",
+   "grid": [
+    6,
+    -4
+   ],
+   "pos": [
+    24914.3,
+    -15798.0,
+    -4569.5
+   ],
+   "heading": 1.8916,
+   "radius_units": 600,
+   "near_road_ref": "0003AB1F",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp04",
+   "order": 4,
+   "role": "checkpoint",
+   "cell": "00009657",
+   "grid": [
+    6,
+    -5
+   ],
+   "pos": [
+    27285.2,
+    -16585.8,
+    -4508.6
+   ],
+   "heading": 1.5738,
+   "radius_units": 600,
+   "near_road_ref": "0003AB10",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp05",
+   "order": 5,
+   "role": "checkpoint",
+   "cell": "00009656",
+   "grid": [
+    7,
+    -5
+   ],
+   "pos": [
+    29771.7,
+    -16593.4,
+    -4484.5
+   ],
+   "heading": 1.5954,
+   "radius_units": 600,
+   "near_road_ref": "0003AB15",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp06",
+   "order": 6,
+   "role": "checkpoint",
+   "cell": "00009656",
+   "grid": [
+    7,
+    -5
+   ],
+   "pos": [
+    32247.1,
+    -16654.3,
+    -4428.6
+   ],
+   "heading": 2.0755,
+   "radius_units": 600,
+   "near_road_ref": "0003AB0A",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp07",
+   "order": 7,
+   "role": "checkpoint",
+   "cell": "00009655",
+   "grid": [
+    8,
+    -5
+   ],
+   "pos": [
+    34299.5,
+    -17788.0,
+    -4252.7
+   ],
+   "heading": 3.4731,
+   "radius_units": 600,
+   "near_road_ref": "0003AB02",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp08",
+   "order": 8,
+   "role": "checkpoint",
+   "cell": "00009655",
+   "grid": [
+    8,
+    -5
+   ],
+   "pos": [
+    33509.8,
+    -20082.4,
+    -3816.1
+   ],
+   "heading": 4.0179,
+   "radius_units": 600,
+   "near_road_ref": "0003AAFB",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp09",
+   "order": 9,
+   "role": "checkpoint",
+   "cell": "00009675",
+   "grid": [
+    7,
+    -6
+   ],
+   "pos": [
+    31595.7,
+    -21676.7,
+    -3326.5
+   ],
+   "heading": 4.2862,
+   "radius_units": 600,
+   "near_road_ref": "0003AB1A",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp10",
+   "order": 10,
+   "role": "checkpoint",
+   "cell": "00009675",
+   "grid": [
+    7,
+    -6
+   ],
+   "pos": [
+    29335.9,
+    -22702.6,
+    -2720.1
+   ],
+   "heading": 3.9801,
+   "radius_units": 600,
+   "near_road_ref": "0003AB38",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp11",
+   "order": 11,
+   "role": "checkpoint",
+   "cell": "00009695",
+   "grid": [
+    6,
+    -7
+   ],
+   "pos": [
+    27479.6,
+    -24371.5,
+    -2178.6
+   ],
+   "heading": 3.829,
+   "radius_units": 600,
+   "near_road_ref": "00067624",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp12",
+   "order": 12,
+   "role": "checkpoint",
+   "cell": "00009695",
+   "grid": [
+    6,
+    -7
+   ],
+   "pos": [
+    25895.5,
+    -26301.2,
+    -1854.2
+   ],
+   "heading": 2.8093,
+   "radius_units": 600,
+   "near_road_ref": "00067C95",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp13",
+   "order": 13,
+   "role": "checkpoint",
+   "cell": "00009695",
+   "grid": [
+    6,
+    -7
+   ],
+   "pos": [
+    26536.4,
+    -28158.3,
+    -1349.0
+   ],
+   "heading": 2.3464,
+   "radius_units": 600,
+   "near_road_ref": "00067BA1",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp14",
+   "order": 14,
+   "role": "checkpoint",
+   "cell": "000096B4",
+   "grid": [
+    6,
+    -8
+   ],
+   "pos": [
+    27927.2,
+    -29522.0,
+    -769.9
+   ],
+   "heading": 3.1219,
+   "radius_units": 600,
+   "near_road_ref": "00018135",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp15",
+   "order": 15,
+   "role": "checkpoint",
+   "cell": "000096B4",
+   "grid": [
+    6,
+    -8
+   ],
+   "pos": [
+    27976.2,
+    -32005.4,
+    -152.2
+   ],
+   "heading": 3.3884,
+   "radius_units": 600,
+   "near_road_ref": "0002BAF6",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp16",
+   "order": 16,
+   "role": "checkpoint",
+   "cell": "000096D3",
+   "grid": [
+    6,
+    -9
+   ],
+   "pos": [
+    27368.9,
+    -34416.2,
+    -105.5
+   ],
+   "heading": 3.9684,
+   "radius_units": 600,
+   "near_road_ref": "00018150",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp17",
+   "order": 17,
+   "role": "checkpoint",
+   "cell": "000096D3",
+   "grid": [
+    6,
+    -9
+   ],
+   "pos": [
+    25571.6,
+    -36070.5,
+    -111.5
+   ],
+   "heading": 4.1343,
+   "radius_units": 600,
+   "near_road_ref": "00018149",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp18",
+   "order": 18,
+   "role": "checkpoint",
+   "cell": "000096F3",
+   "grid": [
+    5,
+    -10
+   ],
+   "pos": [
+    23529.0,
+    -37403.2,
+    -143.9
+   ],
+   "heading": 4.4138,
+   "radius_units": 600,
+   "near_road_ref": "0002B8E4",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  },
+  {
+   "id": "cp19",
+   "order": 19,
+   "role": "turn",
+   "cell": "000096F3",
+   "grid": [
+    5,
+    -10
+   ],
+   "pos": [
+    22300.8,
+    -37781.3,
+    -71.0
+   ],
+   "heading": 1.2722,
+   "radius_units": 600,
+   "near_road_ref": "0004D798",
+   "source": "build/track/route.json (Skyrim.esm road pieces)",
+   "verified": false
+  }
+ ]
+}

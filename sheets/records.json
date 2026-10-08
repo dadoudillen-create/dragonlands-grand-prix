@@ -1,0 +1,158 @@
+{
+ "sheet": "records",
+ "doc": "Plugin records in DragonlandsGP.esp (master Skyrim.esm). base = vanilla record copied or referenced (Skyrim.esm formID, verified with esmfind.py).",
+ "rows": [
+  {
+   "id": "race_quest",
+   "type": "QUST",
+   "edid": "DLGP_RaceQuest",
+   "base": "none",
+   "fields": {
+    "flags": "start game enabled, run once",
+    "script": "DLGP_RaceQuestScript"
+   },
+   "verified": false
+  },
+  {
+   "id": "car_npc",
+   "type": "NPC_",
+   "edid": "DLGP_FerrariCar",
+   "base": "00109E3D WhiterunPlayerHorse",
+   "fields": {
+    "race": "000131FD HorseRace",
+    "skin": "car_skin",
+    "script": "DLGP_CarScript",
+    "no_saddle": true
+   },
+   "verified": true,
+   "verified_by": "in game 2026-10-08: player mounted and rode the car below Solitude (build/shots/mount_1.png)"
+  },
+  {
+   "id": "car_skin",
+   "type": "ARMO",
+   "edid": "DLGP_FerrariSkin",
+   "base": "00060715 SkinHorse",
+   "fields": {
+    "race": "000131FD HorseRace",
+    "addons": [
+     "car_skin_aa"
+    ]
+   },
+   "verified": true,
+   "verified_by": "in game 2026-10-08: player mounted and rode the car below Solitude (build/shots/mount_1.png)"
+  },
+  {
+   "id": "car_skin_aa",
+   "type": "ARMA",
+   "edid": "DLGP_FerrariSkinAA",
+   "base": "00036EA7 NakedHorseAA",
+   "fields": {
+    "model": "cars.skyrim_skinned_mesh",
+    "bone": "NPC Root [Root] (fallback Horse_COM; from skeleton.nif string table)"
+   },
+   "verified": true,
+   "verified_by": "in game 2026-10-08: player mounted and rode the car below Solitude (build/shots/mount_1.png)"
+  },
+  {
+   "id": "car_static",
+   "type": "STAT",
+   "edid": "DLGP_FerrariStatic",
+   "base": "none",
+   "fields": {
+    "model": "cars.skyrim_mesh"
+   },
+   "verified": true
+  },
+  {
+   "id": "engine_sndr",
+   "type": "SNDR",
+   "edid": "DLGP_FerrariEngineSD",
+   "base": "00000F58 OBJWindmillSolitudeLPSD",
+   "fields": {
+    "file": "cars.skyrim_engine_wav",
+    "looping": true,
+    "category": "vanilla SFX"
+   },
+   "verified": false
+  },
+  {
+   "id": "engine_soun",
+   "type": "SOUN",
+   "edid": "DLGP_FerrariEngine",
+   "base": "none",
+   "fields": {
+    "descriptor": "engine_sndr"
+   },
+   "verified": false
+  },
+  {
+   "id": "best_lap_global",
+   "type": "GLOB",
+   "edid": "DLGP_BestLapSeconds",
+   "base": "none",
+   "fields": {
+    "type": "float",
+    "value": 0
+   },
+   "verified": false
+  },
+  {
+   "id": "grid_marker",
+   "type": "REFR",
+   "edid": "DLGP_GridMarker",
+   "base": "00000034 XMarkerHeading",
+   "fields": {
+    "at": "checkpoints.cp00"
+   },
+   "verified": false
+  },
+  {
+   "id": "checkpoint_marker",
+   "type": "REFR",
+   "edid": "DLGP_CP##",
+   "base": "001083D7 FarmBannerPost01",
+   "fields": {
+    "at": "checkpoints.*"
+   },
+   "verified": false
+  },
+  {
+   "id": "start_brazier",
+   "type": "REFR",
+   "edid": "DLGP_GridBrazierL/R",
+   "base": "0008278D WRBrazier01",
+   "fields": {
+    "at": "checkpoints.cp00",
+    "offset_units": "+/-350 across the road"
+   },
+   "verified": false
+  },
+  {
+   "id": "entry_pass",
+   "type": "BOOK",
+   "edid": "DLGP_EntryPass",
+   "base": "0003031F MQ105Note",
+   "fields": {
+    "name": "Dragon-lands Grand Prix entry pass",
+    "script": "DLGP_PassScript (OnRead -> grid prompt)",
+    "given": "at quest start"
+   },
+   "note": "replaces the lesser power: casting magic crashed this Skyrim LE install, and its Magic menu crashes even without the mod",
+   "verified": false
+  },
+  {
+   "id": "grid_prompt",
+   "type": "MESG",
+   "edid": "DLGP_GridPrompt",
+   "base": "00013146 MQ203PuzzleActivatorMessage",
+   "fields": {
+    "text": "Go to the grid at the Whiterun crossroads?",
+    "buttons": [
+     "Go to the grid",
+     "Not now"
+    ]
+   },
+   "verified": false
+  }
+ ]
+}

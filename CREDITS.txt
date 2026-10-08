@@ -1,0 +1,22 @@
+Dragon-lands Grand Prix - a mashup of The Elder Scrolls V: Skyrim and F1 2021
+
+Needs your own copies of both games. Nothing from either game is included in this download:
+the F1 2021 car, livery, engine sound and handling data are converted on your PC, from your own
+F1 2021 install, the first time you press Play.
+
+Built with
+- Ego Engine Modding (ERP, mesh and engine-sound formats), MIT licence, Petar Tasev and contributors:
+  https://github.com/EgoEngineModding/Ego-Engine-Modding  (ported to Python for the importer)
+- papyrus-compiler by russo-2025, MIT licence (build tool, not shipped): https://github.com/russo-2025/papyrus-compiler
+- niftools nif.xml (NIF format reference): https://github.com/niftools/nifxml
+- universal-modder toolkit: https://github.com/rehan-remade/universal-modder
+
+Included runtime (licences in Importer/licenses)
+- Python 3.12 embeddable package, Python Software Foundation License
+- NumPy (BSD-3-Clause), Pillow (MIT-CMU), python-lz4 (BSD-3-Clause), python-zstandard (BSD-3-Clause)
+
+Made with the help of an AI coding assistant (Claude).
+
+The Elder Scrolls V: Skyrim is a trademark of Bethesda Softworks / ZeniMax Media. F1 2021 is a game by
+Codemasters / Electronic Arts; F1 and FORMULA 1 are trademarks of Formula One Licensing B.V. This mashup is an
+unofficial fan project and is not endorsed by any of them.

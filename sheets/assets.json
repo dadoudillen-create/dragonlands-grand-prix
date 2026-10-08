@@ -1,0 +1,118 @@
+{
+ "sheet": "assets",
+ "doc": "Every file the mashup puts in Skyrim. origin=f1 means converted on the player's PC from their F1 2021 by the importer (never shipped); origin=ours means made by this project and shipped.",
+ "rows": [
+  {
+   "id": "car_static_mesh",
+   "origin": "f1",
+   "car": "ferrari",
+   "from": "cars.f1_car_erp (GfxModelRes/GfxMeshRes/GfxBufferRes, LOD cars.lod)",
+   "converter": "importer.car_mesh",
+   "to": "cars.skyrim_mesh",
+   "format": "NIF 20.2.0.7 bsver 83, NiTriShape <=16000 verts, flags 0x1001",
+   "verified": true
+  },
+  {
+   "id": "car_mount_mesh",
+   "origin": "f1",
+   "car": "ferrari",
+   "from": "cars.f1_car_erp",
+   "converter": "importer.car_mount_mesh",
+   "to": "cars.skyrim_skinned_mesh",
+   "format": "NIF skinned rigidly to horse skeleton bone (records.car_skin_aa.bone)",
+   "verified": true,
+   "verified_by": "in game 2026-10-08: player mounted and rode the car below Solitude (build/shots/mount_1.png)"
+  },
+  {
+   "id": "car_livery",
+   "origin": "f1",
+   "car": "ferrari",
+   "from": "cars.f1_car_erp texture <team>_paint_d (BC7 sRGB 2048) + .mipmaps",
+   "converter": "importer.textures",
+   "to": "cars.skyrim_textures/paint_d.dds",
+   "format": "DXT5 1024",
+   "verified": true
+  },
+  {
+   "id": "car_wheel_tex",
+   "origin": "f1",
+   "car": "ferrari",
+   "from": "cars.f1_car_erp texture <team>_wheel_d",
+   "converter": "importer.textures",
+   "to": "cars.skyrim_textures/wheel_d.dds",
+   "format": "DXT5 1024",
+   "verified": true
+  },
+  {
+   "id": "car_steering_tex",
+   "origin": "f1",
+   "car": "ferrari",
+   "from": "cars.f1_car_erp texture <team>_steering_wheel_d",
+   "converter": "importer.textures",
+   "to": "cars.skyrim_textures/steering_wheel_d.dds",
+   "format": "DXT5 1024",
+   "verified": true
+  },
+  {
+   "id": "tyre_mesh",
+   "origin": "f1",
+   "car": "ferrari",
+   "from": "cars.f1_tyre_erp shared/tyres/idf/tyres.idf (wall+tread x4, placed on the car's wheel_fl/fr/bl/br nodes) + shared/tyres/texture_arrays/slick_diffuse.tif, sidewall_diffuse.texarray",
+   "converter": "importer.tyres (carconv.tyre_shapes)",
+   "to": "merged into cars.skyrim_skinned_mesh; textures cars.skyrim_textures/tyre_tread.dds, tyre_wall.dds",
+   "format": "NiTriShape",
+   "verified": false,
+   "note": "wheel meshes in the team archive are rims only (r <= 0.18 m); tyres are shared across teams"
+  },
+  {
+   "id": "engine_sound",
+   "origin": "f1",
+   "car": "ferrari",
+   "from": "cars.f1_engine_bdl throttle source samples (int16 48 kHz)",
+   "converter": "importer.engine_audio",
+   "to": "cars.skyrim_engine_wav",
+   "format": "WAV PCM 16-bit mono 48 kHz, looped",
+   "verified": false
+  },
+  {
+   "id": "carbon_tex",
+   "origin": "ours",
+   "car": "*",
+   "from": "generated flat 22,22,24",
+   "converter": "build.plugin",
+   "to": "textures/dlgp/common/carbon.dds",
+   "format": "DXT1 64",
+   "verified": true
+  },
+  {
+   "id": "flat_normal",
+   "origin": "ours",
+   "car": "*",
+   "from": "generated 128,128,255",
+   "converter": "build.plugin",
+   "to": "textures/dlgp/common/flat_n.dds",
+   "format": "DXT1 64",
+   "verified": true
+  },
+  {
+   "id": "f1_missing_sign",
+   "origin": "ours",
+   "car": "*",
+   "from": "Skyrim vanilla sign mesh + our text texture",
+   "converter": "build.plugin",
+   "to": "meshes/dlgp/notice/f1missing.nif (shown instead of the car)",
+   "format": "NIF",
+   "verified": false
+  },
+  {
+   "id": "checkpoint_marker",
+   "origin": "ours",
+   "car": "*",
+   "from": "vanilla Skyrim banner/torch statics (no F1 look-alike)",
+   "converter": "build.plugin",
+   "to": "records.checkpoint_marker",
+   "format": "REFR of vanilla STAT",
+   "verified": false
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "sheet": "systems",
+ "doc": "Every game system the mashup touches. uses = hooks.id / records.id it relies on.",
+ "rows": [
+  {
+   "id": "importer",
+   "game": "f1+skyrim",
+   "what": "On first Play (Melty recipe.setup) find F1 2021 via Steam libraryfolders.vdf, convert cars/assets rows, write Data files, write status file. If F1 2021 is missing, install the notice instead of the car.",
+   "implemented_by": "src/importer (Python, run by bundled signed python.exe)",
+   "uses": [
+    "melty_setup",
+    "steam_libraryfolders"
+   ],
+   "verified": false
+  },
+  {
+   "id": "car_mount",
+   "game": "skyrim",
+   "what": "Rideable F1 car: horse actor whose skin is the F1 car mesh; player hidden while mounted.",
+   "implemented_by": "records.car_npc, records.car_skin, records.car_skin_aa, DLGP_CarScript",
+   "uses": [
+    "horse_mount",
+    "actor_alpha",
+    "car_npc",
+    "car_skin",
+    "car_skin_aa"
+   ],
+   "verified": false
+  },
+  {
+   "id": "handling",
+   "game": "f1->skyrim",
+   "what": "Speed follows F1 accel/brake/coast curves (scaled by cars.speed_scale) by setting the car actor's SpeedMult each tick from throttle state (sprint = throttle).",
+   "implemented_by": "DLGP_CarScript.OnUpdate",
+   "uses": [
+    "speedmult",
+    "update_tick",
+    "sprint_state"
+   ],
+   "verified": false
+  },
+  {
+   "id": "tyre_wear",
+   "game": "f1->skyrim",
+   "what": "Grip falls per lap along F1 grip levels 1.0 -> 0.6; top speed uses the F1 throttle table at that grip.",
+   "implemented_by": "DLGP_CarScript",
+   "uses": [
+    "update_tick"
+   ],
+   "verified": false
+  },
+  {
+   "id": "engine_audio",
+   "game": "f1->skyrim",
+   "what": "Looped F1 engine sound on the car while mounted; volume follows speed.",
+   "implemented_by": "records.engine_sndr, DLGP_CarScript",
+   "uses": [
+    "sound_play",
+    "engine_sndr"
+   ],
+   "verified": false
+  },
+  {
+   "id": "race_controller",
+   "game": "skyrim",
+   "what": "Start grid at cp00, 3-2-1-GO countdown, checkpoint order, lap timer, best lap.",
+   "implemented_by": "DLGP_RaceQuestScript",
+   "uses": [
+    "quest_start",
+    "update_tick",
+    "realtime_clock",
+    "notification",
+    "distance_check",
+    "best_lap_global"
+   ],
+   "verified": false
+  },
+  {
+   "id": "checkpoints",
+   "game": "skyrim",
+   "what": "Next checkpoint is reached when the car is within radius_units of it (polled each tick).",
+   "implemented_by": "DLGP_RaceQuestScript + checkpoints sheet",
+   "uses": [
+    "distance_check",
+    "checkpoint_marker"
+   ],
+   "verified": false
+  },
+  {
+   "id": "hud",
+   "game": "skyrim",
+   "what": "Countdown, split and lap times shown with Skyrim notifications/message boxes (no SKSE UI).",
+   "implemented_by": "DLGP_RaceQuestScript",
+   "uses": [
+    "notification"
+   ],
+   "verified": false
+  },
+  {
+   "id": "start_travel",
+   "game": "skyrim",
+   "what": "Reading the 'Dragon-lands Grand Prix entry pass' (given at start) or answering the prompt shown on first load and after each lap moves the player and car to the grid at cp00. No magic: casting crashed this install.",
+   "implemented_by": "records.entry_pass, records.grid_prompt, DLGP_PassScript, DLGP_RaceQuestScript.OfferStart",
+   "uses": [
+    "moveto",
+    "book_read",
+    "message_prompt",
+    "add_item",
+    "entry_pass",
+    "grid_prompt"
+   ],
+   "verified": false
+  },
+  {
+   "id": "f1_missing_notice",
+   "game": "skyrim",
+   "what": "If the importer could not find F1 2021, the grid shows a sign and a message: install F1 2021 (Steam) and press Play again.",
+   "implemented_by": "importer status + assets.f1_missing_sign",
+   "uses": [
+    "notification"
+   ],
+   "verified": false
+  }
+ ]
+}

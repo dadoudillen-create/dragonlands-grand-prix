@@ -1,0 +1,46 @@
+{
+ "sheet": "cars",
+ "doc": "One row per drivable F1 2021 car. Paths are relative to the player's F1 2021 folder (found via Steam libraryfolders at import). Nothing from F1 2021 ships; the importer reads these at first launch.",
+ "rows": [
+  {
+   "id": "ferrari",
+   "display_name": "Ferrari",
+   "f1_team_folder": "teams/ferrari",
+   "f1_car_erp": "2021_asset_groups/f1_2021_vehicle_package/teams/ferrari/wep/ferrari.erp",
+   "f1_perf_erp": "2021_asset_groups/f1_2021_vehicle_package/ai/ferrari/very_high/vehicle_performance.erp",
+   "f1_perf_set": {
+    "ers_mode": "none",
+    "index": 0
+   },
+   "f1_engine_bdl": "audio/2021/bundles/ferrari_2020.bdl",
+   "f1_tyre_erp": "2021_asset_groups/f1_2021_vehicle_package/teams/common.erp",
+   "lod": 2,
+   "skip_materials": [
+    "rainbeads"
+   ],
+   "material_textures": {
+    "body": "paint_d",
+    "wheel": "wheel_d",
+    "disc": "wheel_d",
+    "steering": "steering_wheel_d",
+    "other": "carbon"
+   },
+   "skyrim_mesh": "meshes/dlgp/cars/ferrari.nif",
+   "skyrim_skinned_mesh": "meshes/dlgp/cars/ferrari_mount.nif",
+   "skyrim_textures": "textures/dlgp/cars/ferrari",
+   "skyrim_engine_wav": "sound/fx/dlgp/ferrari_engine.wav",
+   "measured": {
+    "top_speed_ms": 86.5,
+    "t_0_100_s": 4.34,
+    "t_0_200_s": 7.67,
+    "brake_100_0_s": 1.64,
+    "coast_top_0_s": 28.1,
+    "mass_kg": 530.3,
+    "source": "F1 2021 AI perf tables (AIAC/AIBR/AICR/AITH), set ers_mode none #0"
+   },
+   "speed_scale": 0.3,
+   "speed_scale_note": "Skyrim cells (58.5 m) stream too slowly for 86 m/s; curves keep F1 shape, scaled to 0.3x. Tune in game.",
+   "verified": false
+  }
+ ]
+}

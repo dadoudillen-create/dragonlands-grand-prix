@@ -1,0 +1,154 @@
+{
+ "sheet": "hooks",
+ "doc": "Every engine or platform entry point used. Skyrim LE 1.9.32 vanilla Papyrus only (no SKSE).",
+ "rows": [
+  {
+   "id": "melty_setup",
+   "where": "Melty recipe.setup",
+   "detail": "launch {managed}/importer/python.exe importer.py --skyrim {game}; done file {localappdata}/DragonlandsGP/import_done.txt",
+   "verified": false
+  },
+  {
+   "id": "steam_libraryfolders",
+   "where": "Windows/Steam",
+   "detail": "HKCU\\Software\\Valve\\Steam SteamPath -> steamapps/libraryfolders.vdf -> appmanifest_1134570.acf installdir",
+   "verified": true
+  },
+  {
+   "id": "quest_start",
+   "where": "Papyrus Quest",
+   "detail": "QUST start-game-enabled, script OnInit",
+   "verified": false
+  },
+  {
+   "id": "update_tick",
+   "where": "Papyrus Form",
+   "detail": "RegisterForSingleUpdate(0.1) / OnUpdate",
+   "verified": false
+  },
+  {
+   "id": "realtime_clock",
+   "where": "Papyrus Utility",
+   "detail": "Utility.GetCurrentRealTime()",
+   "verified": false
+  },
+  {
+   "id": "notification",
+   "where": "Papyrus Debug",
+   "detail": "Debug.Notification / Debug.MessageBox",
+   "verified": false
+  },
+  {
+   "id": "distance_check",
+   "where": "Papyrus ObjectReference",
+   "detail": "GetDistance(ref)",
+   "verified": false
+  },
+  {
+   "id": "moveto",
+   "where": "Papyrus ObjectReference",
+   "detail": "MoveTo(ref) for player and car",
+   "verified": false
+  },
+  {
+   "id": "horse_mount",
+   "where": "Papyrus Actor",
+   "detail": "Game.GetPlayer().IsOnMount(), Activate(player) to mount",
+   "verified": true,
+   "verified_by": "in game 2026-10-08: player mounted and rode the car below Solitude (build/shots/mount_1.png)"
+  },
+  {
+   "id": "actor_alpha",
+   "where": "Papyrus Actor",
+   "detail": "SetAlpha(0.0) on player while mounted",
+   "verified": false
+  },
+  {
+   "id": "speedmult",
+   "where": "Papyrus Actor",
+   "detail": "SetActorValue('SpeedMult', x) then ModActorValue('CarryWeight', +/-0.1) to apply",
+   "verified": false
+  },
+  {
+   "id": "sprint_state",
+   "where": "Papyrus Actor",
+   "detail": "IsSprinting() on the car actor = throttle",
+   "verified": false
+  },
+  {
+   "id": "sound_play",
+   "where": "Papyrus Sound",
+   "detail": "Sound.Play(ref) -> instance; SetInstanceVolume; StopInstance",
+   "verified": false
+  },
+  {
+   "id": "best_lap_global",
+   "where": "Plugin GLOB",
+   "detail": "records.best_lap_global saved in the player's save",
+   "verified": false
+  },
+  {
+   "id": "car_npc",
+   "where": "Plugin NPC_",
+   "detail": "records.car_npc",
+   "verified": true,
+   "verified_by": "in game 2026-10-08: player mounted and rode the car below Solitude (build/shots/mount_1.png)"
+  },
+  {
+   "id": "car_skin",
+   "where": "Plugin ARMO",
+   "detail": "records.car_skin",
+   "verified": true,
+   "verified_by": "in game 2026-10-08: player mounted and rode the car below Solitude (build/shots/mount_1.png)"
+  },
+  {
+   "id": "car_skin_aa",
+   "where": "Plugin ARMA",
+   "detail": "records.car_skin_aa",
+   "verified": true,
+   "verified_by": "in game 2026-10-08: player mounted and rode the car below Solitude (build/shots/mount_1.png)"
+  },
+  {
+   "id": "engine_sndr",
+   "where": "Plugin SNDR/SOUN",
+   "detail": "records.engine_sndr",
+   "verified": false
+  },
+  {
+   "id": "checkpoint_marker",
+   "where": "Plugin REFR",
+   "detail": "records.checkpoint_marker",
+   "verified": false
+  },
+  {
+   "id": "book_read",
+   "where": "Papyrus ObjectReference",
+   "detail": "OnRead on the entry pass (inventory book)",
+   "verified": false
+  },
+  {
+   "id": "message_prompt",
+   "where": "Papyrus Message",
+   "detail": "Message.Show() -> button index",
+   "verified": false
+  },
+  {
+   "id": "add_item",
+   "where": "Papyrus ObjectReference",
+   "detail": "player.AddItem(entry pass)",
+   "verified": false
+  },
+  {
+   "id": "entry_pass",
+   "where": "Plugin BOOK",
+   "detail": "records.entry_pass",
+   "verified": false
+  },
+  {
+   "id": "grid_prompt",
+   "where": "Plugin MESG",
+   "detail": "records.grid_prompt",
+   "verified": false
+  }
+ ]
+}

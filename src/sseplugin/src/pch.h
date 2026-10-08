@@ -1,0 +1,13 @@
+﻿#pragma once
+#define NOMINMAX
+#define WIN32_LEAN_AND_MEAN
+#include <RE/Skyrim.h>
+#include <REL/Relocation.h>
+#include <SKSE/SKSE.h>
+#include <spdlog/sinks/basic_file_sink.h>
+#include <Windows.h>
+#include <ShlObj.h>
+#include <Xinput.h>
+#include <atomic>
+#include <cmath>
+#include <thread>

@@ -1,0 +1,20 @@
+# local working data - never published
+MODLOG.md
+build/
+f1-extract/
+tools/*
+!tools/scripts/
+__pycache__/
+*.pyc
+# game files are never committed (the importer reads them on the player's PC)
+*.esm
+*.bsa
+*.erp
+*.mipmaps
+*.bdl
+*.nif
+*.dds
+*.wav
+*.pex
+*.asi
+*.ess

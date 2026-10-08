@@ -1,0 +1,7 @@
+{
+  "name": "dragonlands-gp",
+  "version-string": "0.2.0",
+  "license": "GPL-3.0-or-later",
+  "dependencies": ["directxmath", "directxtk", "fmt", "nlohmann-json", "rapidcsv", "simpleini", "spdlog", "toml11", "xbyak"],
+  "builtin-baseline": "ee12231b20c95013c6638d845d04c91559a1d1ff"
+}
